@@ -1,0 +1,123 @@
+<div class="container">
+  <div class="profile-container">
+    <img src="images/ganesh.jpg" alt="Ganesh" />
+  </div>
+
+  <div class="letter">
+    <h1>Hello, I’m Ganesh Patil.<span class="wave">👋</span></h1>
+    <p>
+      I am currently working on building and maintaining complete CI/CD pipelines using Jenkins, Docker, and Kubernetes. I actively explore AWS services and stay up to date with modern cloud deployment practices.
+    </p>
+
+    <p>
+      With a strong foundation in computer networking and Linux systems, I bring both technical depth and practical knowledge to my work. I’m always eager to learn, grow, and contribute to impactful projects that challenge me to think creatively.
+    </p>
+
+    <p>
+      Outside of my main role, I enjoy building side projects to sharpen my skills, experiment with new technologies, and turn ideas into real-world solutions.
+    </p>
+  </div>
+</div>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Didact+Gothic');
+
+body {
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 18px;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Archivo Black', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.1;
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #3206b2;
+  border-bottom: 1px solid #3206b2;
+}
+
+a:hover {
+  border: none;
+}
+
+p {
+  margin-top: 0;
+}
+
+img {
+  max-width: 65%;
+}
+
+span.wave {
+  display: inline-block;
+  font-size: 1.7em;
+  animation: wave 700ms ease-in-out 2;
+  transform-origin: center;
+}
+
+@keyframes wave {
+  0% { transform: rotate(30deg); }
+  50% { transform: rotate(0deg); }
+  100% { transform: rotate(30deg); }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 0;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.profile-container {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 40px;
+}
+
+.letter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fade-in 1.4s cubic-bezier(0.13, 1.04, 0.96, 1.03) forwards;
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; padding-top: 0; }
+}
+
+@media screen and (min-width: 939px) {
+  body {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    flex-direction: row;
+    max-width: 1200px;
+    height: 100vh;
+  }
+
+  .profile-container {
+    margin-top: 0;
+  }
+
+  .letter {
+    order: 2;
+  }
+
+  h1 {
+    font-size: 2.1em;
+  }
+}
+</style>
