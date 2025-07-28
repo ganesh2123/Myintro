@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myintro-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myintro
+  template:
+    metadata:
+      labels:
+        app: myintro
+    spec:
+      containers:
+      - name: myintro-container
+        image: ganesh2123/myintro:latest   # Your DockerHub image here
+        ports:
+        - containerPort: 80
